@@ -1,4 +1,4 @@
-package com.example.select_img_from_gallery_android.View
+package com.example.select_img_from_gallery_android.View.activities
 
 import android.content.Intent
 import android.net.Uri
@@ -8,7 +8,6 @@ import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
-import com.example.select_img_from_gallery_android.MainActivity
 import com.example.select_img_from_gallery_android.databinding.ActivityProfileBinding
 import com.example.select_img_from_gallery_android.model.UserModel
 import com.google.firebase.auth.FirebaseAuth

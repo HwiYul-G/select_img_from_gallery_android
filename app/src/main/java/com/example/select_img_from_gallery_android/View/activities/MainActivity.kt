@@ -1,4 +1,4 @@
-package com.example.select_img_from_gallery_android
+package com.example.select_img_from_gallery_android.View.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
