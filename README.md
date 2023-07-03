@@ -17,10 +17,12 @@
     <li>
         <b>ViewPager1 is deprecated</b><br>
         ViewPager2를 사용해야 한다. MainActivity의 xml 파일에 viewpager2 영역을 만든다. 참고로 여기서는 TabLayout(이른바 TabBar)이랑 연결 한다.(swipe 형식이 아니다.) ViewPager2에 대한 Adapter는 FragmentStateAdapter라는 것을 상속 받고 FragmentManager와 Lifecycle을 인자로 받아서 넘겨주어야 한다. 상속받은 것에서 반드시 재정의(override)해 주어야 하는 getItenCount()와 createFragment(position : Int)를 구현해준다. getItemCount는 내가 ViewPager에서 보여줄 Fragment의 총 갯수이고 createFragment(position : Int)는 해당 position에 Fragment를 생성해주는 것이다. 말 그대로 ViewPager2 영역에 대한 변환기? adapter인 것이다. <br>
-
+        <div>
         이를 MainActivity.kt에서 코드상에서 작성하면 viewPager라는 변수에 binding.viewPager(XML에 있는 View Pager를 변수로 담아 둔 것)을 넣어준다. 매번 binding.viewPager를 쓰기 귀찮아서 하는 작업이다. viewPager(사실 binding.viewPager임)의 adapter에 앞서 만든 클래스의 객체를 생성해주면 된다. ViewPagerAdapter(supportFragmentManager, lifecycler)을 넣어준다. 이때! apply라는 것으로 ViewPagerAdapter 안에 있는 addFragment(이건 내가 재정의 한 것이 아니라 별도로 만든 것)을 통해 Fragment를 순차적으로 넣어준다.<br>
-
+        </div>
+        <div>
         참고로 TabLayoutMediator라는 것을 통해 tablayout(우리는 Tabbar)로 TabBar와 ViewPager를 연결시켜주어야 한다.
+        </div>
     </li>
     <li>
         <b>FragmentManager란?</b><br>
